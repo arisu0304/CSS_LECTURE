@@ -1,0 +1,59 @@
+/*rotate 함수: x축, y축으로 태그를 지정한 각도만큼 회전시키는 함수, 매개변수로 deg와 각도를 넣어준다.*/
+div {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    display: inline-block;
+}
+
+.box1 {
+    background: orange;
+}
+
+.box2 {
+    background: skyblue;
+}
+
+.box3 {
+    background: lightgreen;
+    
+}
+
+@keyframes rotateClockwise {
+    from {
+        transform: rotate(0deg); /* 시작 회전 각도: 0도 */
+    }
+    to {
+        transform: rotate(360deg); /* 끝 회전 각도: 360도 (한 바퀴) */
+    }
+}
+
+@keyframes rotateXClockwise {
+    from {
+        transform: rotateX(0deg); /* 시작 회전 각도: 0도 */
+    }
+    to {
+        transform: rotateX(360deg); /* 끝 회전 각도: 360도 (한 바퀴) */
+    }
+}
+
+@keyframes rotateYClockwise {
+    from {
+        transform: rotateY(0deg); /* 시작 회전 각도: 0도 */
+    }
+    to {
+        transform: rotateY(360deg); /* 끝 회전 각도: 360도 (한 바퀴) */
+    }
+}
+
+.box1:hover {
+    animation: rotateXClockwise 3s linear infinite; 
+}
+
+.box2:hover {
+    animation: rotateYClockwise 3s linear infinite; 
+}
+
+.box3:hover {
+    animation: rotateClockwise 3s linear infinite; 
+}

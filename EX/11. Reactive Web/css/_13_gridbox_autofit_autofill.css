@@ -1,0 +1,57 @@
+/*auto-fit: 컬럼의 크기에 맞춰서 자동으로 컬럼의 개수를 지정하는 속성값
+            (repate 함수의 첫 번째 매개변수의 값으로 사용한다.)
+            빈 공간없이 꽉 채워서 항목들을 배치
+auto-fill: 컬럼의 크기에 맞춰서 자동으로 컬럼의 개수를 지정하는 속성값
+            (repate 함수의 첫 번째 매개변수의 값으로 사용한다.)
+            공간은 그대로 두면서 항목들을 배치
+grid-template-colums에서만 사용한다.*/
+/* auto-fill은 설정된 너비에서 가능한 많은 셀들을 만들어 내려고 한다.
+겉으로 보기에는 빈 공간이 있더라도 셀의 길이를 늘리지 않는다.
+
+auto-fit은 빈 공간을 셀들이 나누어 가져서 딱 맞게 길이를 설정한다.
+겉으로 보기에는 셀의 길이를 전체 너비에 맞게 늘린다. */
+.container {
+    display: grid;
+    margin: 20px;
+    grid-template-rows: 100px;
+}
+
+.container1 {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.container2 {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.box1 {
+    background: red;
+}
+
+.box2 {
+    background: green;
+}
+
+.box3 {
+    background: blue;
+}
+
+.box4 {
+    background: brown;
+}
+
+.box5 {
+    background: violet;
+}
+
+.box6 {
+    background: yellow;
+}
+
+.box7 {
+    background: aqua;
+}
+
+.box8 {
+    background: lightgreen;
+}
